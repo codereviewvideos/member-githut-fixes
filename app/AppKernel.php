@@ -16,7 +16,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
-            new EightPoints\Bundle\GuzzleBundle\GuzzleBundle(),
+            new EightPoints\Bundle\GuzzleBundle\EightPointsGuzzleBundle(),
 
             new AppBundle\AppBundle(),
         ];
@@ -27,6 +27,12 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
         }
+
+        if ('dev' === $this->getEnvironment()) {
+            // ...
+            $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
+        }
+
 
         return $bundles;
     }
