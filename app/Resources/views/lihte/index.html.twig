@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="col-sm-3">
+
+	{{ render (controller('AppBundle:lihte:profile', { 'username': username })) }}
+
+</div>
+
+<div class="col-sm-4">
+	
+	{{ render (controller('AppBundle:lihte:repos', { 'username': username })) }}
+	
+</div>
+
+{% endblock body %}

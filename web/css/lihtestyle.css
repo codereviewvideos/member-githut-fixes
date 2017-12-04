@@ -1,0 +1,17 @@
+body {
+  padding-top: 90px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+  background-color: red;
+}
+
+.social-metric-count {
+	font-size: 26px;
+	text-align: center;
+}
+
+.list-group-item {
+	min-height: 60px;
+}
